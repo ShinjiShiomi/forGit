@@ -12,11 +12,14 @@ $name=$_POST['name'];
 $email=$_POST['email'];
 $password=$_POST['password'];
 
-$sql="select count(ID) as COUNT from users where email=$email)";
+$sql="select count(ID) as COUNT from users where email='$email'";
+// print $sql;
 $stmt=$dbh->prepare($sql);
 $stmt->execute();
 $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-if($rec['COUNT'] !== 0){
+// print $rec['COUNT'];
+
+if($rec['COUNT'] == 1){
   print "すでに登録されているメールアドレスです。";
   print '<br/>';
   print '<input type="button" onclick="history.back()" value="戻る">';

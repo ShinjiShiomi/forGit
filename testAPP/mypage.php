@@ -32,5 +32,7 @@
       print '<input type="button" onclick="history.back()" value="戻る">';
     }
     ?>
+    <br>
+    <form method="post" action="index.php" ><input type="submit" value="ログインページに戻る"></form>
   </body>
 </html>

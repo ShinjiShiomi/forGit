@@ -10,6 +10,7 @@
       email <input type="text" name="email" value=""><br>
       password <input type="text" name="password" value=""><br>
       <input type="submit" value="確認">
+      <input type="button" onclick="history.back()" value="戻る">
     </form>
   </body>
 </html>
